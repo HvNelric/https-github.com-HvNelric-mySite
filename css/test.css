@@ -1,0 +1,29 @@
+.row-rouge{
+
+	background: rgba(213, 27, 27, 0.1);
+}
+
+.colonne-rouge{
+	background: rgba(23, 19, 78, 0.8);
+	border: 1px solid black;
+}
+
+.row-bleu {
+	height: 300px;
+
+}
+
+.myRow1 {
+	background: red;
+}
+.myRow2 {
+	background: green;
+}
+
+.myRow3 {
+	background: yellow;
+}
+
+.myRow4 {
+	background: lightsalmon;
+}
