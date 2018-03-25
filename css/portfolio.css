@@ -475,12 +475,15 @@ text{
 	left: 50px;
 	background: #fff;
 	overflow: hidden;
-	margin-top: 200px;
-	opacity: 0;
 	-moz-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
 	-o-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
 	box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
+}
+
+.img-conteneur1, .img-conteneur2, .img-conteneur3, .img-conteneur4{
+	margin-top: 100px;
+	opacity: 0;
 }
 
 #frontend .gall-powder img{
@@ -513,12 +516,18 @@ text{
 }
 
 #frontend .gall-vide .site-texte p{
-	margin: 50px 0 0 20px;
+	margin-top: 20px;
+	margin-left: 200px;
+	opacity: 0;
 	padding: 0 50px 20px 0;
 	line-height: 1.7;
 }
 
 /**************** GALL DROITE *******************/
+.gall-powder{
+	height: 300px;
+}
+
 .gall-powder img{
 	cursor: pointer;
 }
@@ -531,6 +540,7 @@ text{
 #frontend .row-gall-droite .gall-salmon{
 	background: lightsalmon;
 	height: 300px;
+	opacity: 0;
 }
 
 .gall-salmon .img-conteneur-droite{
@@ -539,7 +549,6 @@ text{
 	top: 50px;
 	right: 50px;
 	cursor: pointer;
-	margin-top: 200px;
 
 	-moz-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
@@ -554,6 +563,7 @@ text{
 
 #frontend .row-gall-droite .gall-vide{
 	text-align: right;
+	overflow: hidden;
 }
 
 #frontend .row-gall-droite .gall-vide .site-number-gauche{
@@ -579,15 +589,22 @@ text{
 	right: 60px;
 }
 
-#frontend .row-gall-droite .gall-vide .site-texte-gauche p{
-	margin: 50px 20px 0 0;
-	padding: 0 0 20px 50px;
-	line-height: 1.7;
+.gall-vide .site-texte h2{
+	margin-left: 200px;
+	opacity: 0;
 }
 
-.testone{
-	z-index: 500 !important;
-	position: absolute;
+#frontend .row-gall-droite .gall-vide .site-texte-gauche h2{
+	margin-right: 200px;
+	opacity: 0;
+}
+
+#frontend .row-gall-droite .gall-vide .site-texte-gauche p{
+	margin-top: 20px;
+	margin-right: 200px;
+	padding: 0 0 20px 50px;
+	line-height: 1.7;
+	opacity: 0;
 }
 
 .gall-margin-top{
@@ -609,18 +626,25 @@ text{
 	text-align: center;
 }
 
-.row-plus .plus-more{
+.row-plus .more-conteneur{
+	width: 250px;
+	position: relative;
+    top: 75px;
+	left: 145px;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.row-plus .more-conteneur .plus-more{
 	font-size: 1.5em;
 	color: #fff;
-    background: powderblue;
-    position: relative;
-    top: 75px;
-    left: 145px;
+    background: lightsalmon;
 	padding: 10px 0 10px 50px;
-	border-radius: 4px;
-	z-index: -1;
-	width: 250px;
-	overflow: hidden;
+	border-radius: 5px;
+	position: relative;
+	top: 0;
+	left: -250px;
+	
 }
 
 .row-plus .plus-conteneur .site-plus{

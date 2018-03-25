@@ -9,13 +9,14 @@ $(document).ready( function() {
     var docViewBottom;
     var elemTop;
     var elemBottom;
+    var index = 0;
     var leScroll = 0;
 
     var detecNb = [
-        '.number01',
-        '.number02',
-        '.number03',
-        '.number04'
+        {num : '.number01', img : '.img-conteneur1'},
+        { num : '.number02', img : '.img-conteneur2' },
+        { num : '.number03', img : '.img-conteneur3' },
+        { num : '.number04', img : '.img-conteneur4' }
     ];
     
     // anim démarrage
@@ -102,17 +103,8 @@ $(document).ready( function() {
             $(this).animate({ 'opacity': '1' }, 250, "easeOutQuad");
         }
     );
-    
-    // hover frontend plus
-    $('.site-plus').hover(function () {
-        $('#btn-plus').attr('d', 'M 100,100 L 0,0 L 100,0 L 100,100 Z');
-    },
-        function () {
-            $('#btn-plus').attr('d', 'M 0,50 L 100,50 L 100,100 L 0,100 Z');
-        }
-    );
 
-    // detection elem dans viexport
+    // detection elem dans viewport
     function inView(elem) {
         $elem = $(elem);
         $window = $(window);
@@ -144,14 +136,15 @@ $(document).ready( function() {
     $(window).scroll(function () {
         var goAnim = $('.go-anim');
         var goIcone = $('.icone-conteneur');
-        var i =0;
-        var goImg = $('.number01');
+
+        var goImg;
+        var goNum;
 
         if(inView(goAnim)) {
             goAnim.animate({ marginTop: '0', opacity: '1'}, 1550, 'easeInOutExpo');
             $('.con-about h3').delay(200).animate({ marginTop: '0', opacity: '1' }, 1550, 'easeInOutExpo');
             $('.con-about p').delay(650).animate({ marginTop: '20px', opacity: '1' }, 1550, 'easeInOutExpo');
-            $('.con-about i').delay(1650).animate({ marginTop: '0', opacity: '1' }, 1550, 'easeInOutExpo');
+            $('.con-about i').delay(1250).animate({ marginTop: '0', opacity: '1' }, 1550, 'easeInOutExpo');
         }
         else if(inView(goIcone)) {
             goIcone.animate({width: '100px', height: '100px', opacity: '1'}, 550, 'easeOutBounce', function() {
@@ -160,21 +153,49 @@ $(document).ready( function() {
             .next().delay(200).animate({marginTop: '0', opacity: '1'}, 1550, 'easeInOutExpo')
             .next().delay(650).animate({marginTop: '20px', opacity: '1'}, 1500, 'easeInOutExpo');
         }
-
-
-        else if(inView(goImg)) {
-            $('.gall-powder').animate({ opacity: '1' }, 350, 'easeInOutExpo');
+        else if(inView($('.number01'))) {
+            $('.gall-powder').animate({ opacity: '1' }, 200, 'easeInOutExpo');
+            $('.img-conteneur1').delay(200).animate({ marginTop: '0', opacity: '1' }, 1000, 'easeInOutExpo');
+            $('.anim-h2-1').delay(200).animate({ marginLeft: '20px', opacity: '1'}, 1000, 'easeInOutExpo');
+            $('.anim-p-1').delay(400).animate({ marginLeft: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
         }
-       
-            // $('.gall-powder').animate({ opacity: '1' }, 350, 'easeInOutExpo');
-                // $('.img-conteneur-gauche').delay(250).animate({ marginTop: '0', opacity: '1' }, 600, 'easeInOutExpo');      
-
+        else if(inView($('.number02'))) {
+            $('.gall-salmon').animate({ opacity: '1' }, 200, 'easeInOutExpo');
+            $('.img-conteneur2').delay(200).animate({ marginTop: '0', opacity: '1' }, 1000, 'easeInOutExpo');
+            $('.anim-h2-2').delay(200).animate({ marginRight: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
+            $('.anim-p-2').delay(400).animate({ marginRight: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
+        }
+        else if(inView($('.number03'))) {
+            $('.gall-powder').animate({ opacity: '1' }, 200, 'easeInOutExpo');
+            $('.img-conteneur3').delay(200).animate({ marginTop: '0', opacity: '1' }, 1000, 'easeInOutExpo');
+            $('.anim-h2-3').delay(200).animate({ marginLeft: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
+            $('.anim-p-3').delay(400).animate({ marginLeft: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
+        }
+        else if(inView($('.number04'))) {
+            $('.gall-salmon').animate({ opacity: '1' }, 200, 'easeInOutExpo');
+            $('.img-conteneur4').delay(200).animate({ marginTop: '0', opacity: '1' }, 1000, 'easeInOutExpo');
+            $('.anim-h2-4').delay(200).animate({ marginRight: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
+            $('.anim-p-4').delay(400).animate({ marginRight: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
+        }
     });
+    
+    // hover frontend plus
+    $('.site-plus').hover(function () {
+        $('#btn-plus').attr('d', 'M 100,100 L 0,0 L 100,0 L 100,100 Z');
+        $('.plus-more').animate({ left: '0' }, 800, 'easeOutBounce');
+    },
+        function () {
+            $('#btn-plus').attr('d', 'M 0,50 L 100,50 L 100,100 L 0,100 Z');
+            $('.plus-more').animate({ left: '-250px' }, 500, 'easeInOutExpo');
+        }
+    );
 
 
 
 
 });
+
+// LAST
 
 // function isScrolledIntoView(elem) {
 //     var $elem = $(elem);
