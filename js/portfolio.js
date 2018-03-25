@@ -2,8 +2,21 @@ $(document).ready( function() {
     var selectNav = $('nav');
     var selectPlus = $('#bg-plus');
     var selecGraphH2 = $('.row-graph-h2');
-
+    var goImg ;
+    var $elem;
+    var $window;
+    var docViewTop;
+    var docViewBottom;
+    var elemTop;
+    var elemBottom;
     var leScroll = 0;
+
+    var detecNb = [
+        '.number01',
+        '.number02',
+        '.number03',
+        '.number04'
+    ];
     
     // anim démarrage
     $('#keyart-1').fadeIn(3000).removeClass('hide');
@@ -38,7 +51,7 @@ $(document).ready( function() {
     function docParallax2() {
         var scrollPos2 = $(this).scrollTop();
         selecGraphH2.css({
-            'background-position': '50% ' + (-scrollPos2 / 12) + "px"
+            'background-position': '50% ' + (-scrollPos2 / 14) + "px"
         });
     }
 
@@ -100,34 +113,62 @@ $(document).ready( function() {
     );
 
     // detection elem dans viexport
-    $.fn.inView = function() {
-        // Am I visible?
-        // Height and Width are not explicitly necessary in visibility detection, the bottom, right, top and left are the
-        // essential checks. If an image is 0x0, it is technically not visible, so it should not be marked as such.
-        // That is why either width or height have to be > 0.
-        var rect = this[0].getBoundingClientRect();
-        return (
-            (rect.height > 0 || rect.width > 0) &&
-            rect.bottom >= 0 &&
-            rect.right >= 0 &&
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    };
+    function inView(elem) {
+        $elem = $(elem);
+        $window = $(window);
+
+        docViewTop = $window.scrollTop();
+        docViewBottom = docViewTop + $window.height();
+
+        elemTop = $elem.offset().top;
+        elemBottom = elemTop + $elem.height();
+
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
+    // $.fn.inView = function() {
+    //     // Am I visible?
+    //     // Height and Width are not explicitly necessary in visibility detection, the bottom, right, top and left are the
+    //     // essential checks. If an image is 0x0, it is technically not visible, so it should not be marked as such.
+    //     // That is why either width or height have to be > 0.
+    //     var rect = this[0].getBoundingClientRect();
+    //     return (
+    //         (rect.height > 0 || rect.width > 0) &&
+    //         rect.bottom >= 0 &&
+    //         rect.right >= 0 &&
+    //         rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+    //         rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+    //     );
+    // };
 
     $(window).scroll(function () {
         var goAnim = $('.go-anim');
         var goIcone = $('.icone-conteneur');
-        var goTxt = $('.testone');
-        if(goAnim.inView()) {
-            goAnim.animate({marginTop: '0', opacity: '1'}, 550);
+        var i =0;
+        var goImg = $('.number01');
+
+        if(inView(goAnim)) {
+            goAnim.animate({ marginTop: '0', opacity: '1'}, 1550, 'easeInOutExpo');
+            $('.con-about h3').delay(200).animate({ marginTop: '0', opacity: '1' }, 1550, 'easeInOutExpo');
+            $('.con-about p').delay(650).animate({ marginTop: '20px', opacity: '1' }, 1550, 'easeInOutExpo');
+            $('.con-about i').delay(1650).animate({ marginTop: '0', opacity: '1' }, 1550, 'easeInOutExpo');
         }
-        else if(goIcone.inView()) {
-            goIcone.addClass('go-anim-icone');
+        else if(inView(goIcone)) {
+            goIcone.animate({width: '100px', height: '100px', opacity: '1'}, 550, 'easeOutBounce', function() {
+                $('.icone-conteneur i').animate({opacity: '1' }, 750, 'easeInOutExpo');
+            })
+            .next().delay(200).animate({marginTop: '0', opacity: '1'}, 1550, 'easeInOutExpo')
+            .next().delay(650).animate({marginTop: '20px', opacity: '1'}, 1500, 'easeInOutExpo');
         }
-        else if(goTxt.inView()) {
-            goTxt.delay(200).addClass('go-anim-icone');
+
+
+        else if(inView(goImg)) {
+            $('.gall-powder').animate({ opacity: '1' }, 350, 'easeInOutExpo');
         }
+       
+            // $('.gall-powder').animate({ opacity: '1' }, 350, 'easeInOutExpo');
+                // $('.img-conteneur-gauche').delay(250).animate({ marginTop: '0', opacity: '1' }, 600, 'easeInOutExpo');      
+
     });
 
 
@@ -135,8 +176,29 @@ $(document).ready( function() {
 
 });
 
+// function isScrolledIntoView(elem) {
+//     var $elem = $(elem);
+//     var $window = $(window);
 
+//     var docViewTop = $window.scrollTop();
+//     var docViewBottom = docViewTop + $window.height();
 
+//     var elemTop = $elem.offset().top;
+//     var elemBottom = elemTop + $elem.height();
+
+//     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+// }
+
+// $(window).scroll(function () {
+//     $('.text').each(function () {
+//         if (isScrolledIntoView($(this))) {
+//             $(this).children('span').text('visible');
+//         }
+//         else {
+//             $(this).children('span').text('invisible');
+//         }
+//     });
+// });
 
 // function partielVisible(el) {
 //     var elementBoundary = el.getBoundingClientRect();

@@ -361,28 +361,33 @@ a.myNav-item{
 }
 
 .con-about h3{
+	margin-top: 100px;
 	margin-bottom: 50px;
-}
-
-.con-about .bulle-dialogue{
-	padding: 0 40px;
-	margin: 20px;	
+	opacity: 0;
 }
 
 .con-about .fa-quote-left{
 	color: var(--bg2);
 	font-size: 4em;
 	margin-right: 40vw;
+	opacity: 0;
 }
 
 .con-about .fa-quote-right{
 	color: var(--bg2);
 	font-size: 4em;
 	margin-left: 40vw;
+	opacity: 0;
 }
 .con-about p.bulle-dialogue{
+	padding: 0 40px;
 	line-height: 1.8;
 	font-size: 1.5em;
+	margin-top: 100px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	opacity: 0;
 }
 
 /*********************** Front End **********************/
@@ -419,29 +424,15 @@ text{
 
 .icone-conteneur{
 	background: var(--bleu1);
-	height: 100px;
-	width: 100px;
 	border-radius: 50%;
 	display: inline-block;
-	margin-top: 100px;
 	margin-bottom: 30px;
 	overflow: hidden;
 	opacity: 0;
-	transition: all 500ms ease-in-out;
 	-moz-box-shadow: 1px 1px 20px 1px var(--bg2);
 	-webkit-box-shadow: 1px 1px 20px 1px var(--bg2);
 	-o-box-shadow: 1px 1px 20px 1px var(--bg2);
 	box-shadow: 1px 1px 20px 1px var(--bg2);
-}
-
-.row-etapes .testone, .row-etapes .testtwo{
-	opacity: 0;
-	transition: all 500ms ease-in-out;
-}
-
-.go-anim-icone{
-	transform: translate3d(0, -100px, 0);
-	opacity: 1;
 }
 
 .icone-conteneur i{
@@ -449,6 +440,7 @@ text{
 	color: #fff;
 	position: relative;
 	top: 20px;
+	opacity: 0;
 }
 
 .icone-conteneur:hover{
@@ -456,16 +448,25 @@ text{
 	transition: all 500ms ease-in-out;
 }
 
+.row-etapes h4, .row-etapes p{
+	opacity: 0;
+	margin-top: 100px;
+}
+
 #frontend .row-etapes p{
 	line-height: 1.7;
-	margin-top: 20px;
 	margin-bottom: 0;
+}
+
+.go-anim-icone{
+	transform: translate3d(0, -100px, 0);
+	opacity: 1;
 }
 
 /*********** GALL GAUCHE **********/
 #frontend .gall-powder{
 	background:var(--bleu1);
-	height: 300px;
+	opacity: 0;
 }
 
 #frontend .gall-powder .img-conteneur-gauche{
@@ -474,7 +475,8 @@ text{
 	left: 50px;
 	background: #fff;
 	overflow: hidden;
-
+	margin-top: 200px;
+	opacity: 0;
 	-moz-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
 	-o-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
@@ -537,7 +539,7 @@ text{
 	top: 50px;
 	right: 50px;
 	cursor: pointer;
-
+	margin-top: 200px;
 
 	-moz-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
