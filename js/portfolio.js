@@ -154,28 +154,43 @@ $(document).ready( function() {
             .next().delay(650).animate({marginTop: '20px', opacity: '1'}, 1500, 'easeInOutExpo');
         }
         else if(inView($('.number01'))) {
-            $('.gall-powder').animate({ opacity: '1' }, 200, 'easeInOutExpo');
+            $('.anim-bg1').animate({ opacity: '1' }, 400, 'easeInOutExpo');
             $('.img-conteneur1').delay(200).animate({ marginTop: '0', opacity: '1' }, 1000, 'easeInOutExpo');
             $('.anim-h2-1').delay(200).animate({ marginLeft: '20px', opacity: '1'}, 1000, 'easeInOutExpo');
             $('.anim-p-1').delay(400).animate({ marginLeft: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
         }
         else if(inView($('.number02'))) {
-            $('.gall-salmon').animate({ opacity: '1' }, 200, 'easeInOutExpo');
+            $('.anim-bg2').animate({ opacity: '1' }, 400, 'easeInOutExpo');
             $('.img-conteneur2').delay(200).animate({ marginTop: '0', opacity: '1' }, 1000, 'easeInOutExpo');
             $('.anim-h2-2').delay(200).animate({ marginRight: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
             $('.anim-p-2').delay(400).animate({ marginRight: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
         }
         else if(inView($('.number03'))) {
-            $('.gall-powder').animate({ opacity: '1' }, 200, 'easeInOutExpo');
+            $('.anim-bg3').animate({ opacity: '1' }, 400, 'easeInOutExpo');
             $('.img-conteneur3').delay(200).animate({ marginTop: '0', opacity: '1' }, 1000, 'easeInOutExpo');
             $('.anim-h2-3').delay(200).animate({ marginLeft: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
             $('.anim-p-3').delay(400).animate({ marginLeft: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
         }
         else if(inView($('.number04'))) {
-            $('.gall-salmon').animate({ opacity: '1' }, 200, 'easeInOutExpo');
+            $('.anim-bg4').animate({ opacity: '1' }, 400, 'easeInOutExpo');
             $('.img-conteneur4').delay(200).animate({ marginTop: '0', opacity: '1' }, 1000, 'easeInOutExpo');
             $('.anim-h2-4').delay(200).animate({ marginRight: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
             $('.anim-p-4').delay(400).animate({ marginRight: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
+        }
+
+        else if (inView($('.svg-graph-id'))) {
+            $('.svg-graph-id').animate({ width: '150px', height: '150px' }, 1000, 'easeOutBounce');
+            $('.svg-graph-ai').delay(200).animate({ width: '150px', height: '150px' }, 1500, 'easeOutBounce');
+            $('.svg-graph-ps').delay(400).animate({ width: '150px', height: '150px' }, 1500, 'easeOutBounce');
+
+            $('.graph-h4-id').animate({ marginTop: '0', opacity: '1' }, 1000, 'easeInOutExpo');
+            $('.graph-p-id').delay(200).animate({ marginTop: '20px', opacity: '1' }, 1500, 'easeInOutExpo');
+
+            $('.graph-h4-ai').animate({ marginTop: '0', opacity: '1' }, 1000, 'easeInOutExpo');
+            $('.graph-p-ai').delay(200).animate({ marginTop: '20px', opacity: '1' }, 1500, 'easeInOutExpo');
+
+            $('.graph-h4-ps').animate({ marginTop: '0', opacity: '1' }, 1000, 'easeInOutExpo');
+            $('.graph-p-ps').delay(200).animate({ marginTop: '20px', opacity: '1' }, 1500, 'easeInOutExpo');
         }
     });
     

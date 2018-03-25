@@ -12,7 +12,7 @@
 	--couleur-orange2: #F38B5E;
 
 	/*--color-head: #4d7389;*/
-	--color-head: #465866;
+	--color-head: #445663;
 
 	--bleu0: #D6EAF8;
 
@@ -263,7 +263,7 @@ h4{
 
 /********************************************* HEADER ***********************/
 .myNav{
-	padding: 0.5rem 0;
+	padding: 0.4rem 0;
 	width: 100%;
 	position: fixed;
 	z-index: 300;
@@ -283,8 +283,8 @@ a.myNav-item{
 	color: var(--bleu2);
 	letter-spacing: 0.2em;
 	transition: 500ms ease-in-out;
-	padding-top: 0.2rem !important;
-	padding-bottom: 0.2rem !important;
+	padding-top: 0.3rem !important;
+	padding-bottom: 0.3rem !important;
 }
 
 .myNav-item:hover{
@@ -311,8 +311,8 @@ a.myNav-item{
 }
 
 .vide-conteneur{
-	height: 300px;
-	background: var(--color-head);
+	background: var(--bg1);
+	padding: 0 !important;
 }
 /***************************** Profil *****************/
 .con-profil{
@@ -320,7 +320,7 @@ a.myNav-item{
 	width: 500px;
 	left: 50%;
 	margin-left: -250px;
-	top: 160px;
+	top: 120px;
 	text-align: center;
 }
 .con-profil h2{
@@ -659,7 +659,7 @@ text{
 }
 
 #btn-plus{
-	transition: all 250ms ease-in-out;
+	transition: all 500ms ease-in-out;
 }
 
 .row-plus .plus-conteneur .site-plus:hover #btn-plus{
@@ -676,7 +676,7 @@ text{
 }
 
 .row-graph-h2{
-	background: url(../img/photos/dsc0222bis.jpg) center fixed no-repeat;
+	background: url(../img/photos/dsc0305.jpg) center fixed no-repeat;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -688,12 +688,27 @@ text{
 	text-align: center;
 }
 
-.row-graph-adobe .myCol{
+.row-graph-adobe .graph-col{
 	padding: 0 40px;
 }
 
 .row-graph-adobe{
 	line-height: 1.7;
+}
+
+.svg-graph-ai, .svg-graph-id, .svg-graph-ps{
+	width: 1px;
+	height: 1px;
+}
+
+.graph-h4-ai, .graph-h4-id, .graph-h4-ps{
+	margin-top: 100px;
+	opacity: 0;
+}
+
+.graph-p-ai, .graph-p-id, .graph-p-ps{
+	margin-top: 120px;
+	opacity: 0;
 }
 
 /******************************************************************************/
