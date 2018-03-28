@@ -711,6 +711,54 @@ text{
 	opacity: 0;
 }
 
+/******** Graph Gallerie ******/
+.graph-gallerie .gallerie-col{
+	padding: 10px;
+}
+
+.graph-gallerie .gallerie-col .gallerie-img-conteneur img{
+	width: 100%;
+	height: 100%;
+}
+
+.graph-gallerie .gallerie-col .gallerie-img-conteneur{
+	-moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.2);
+	-o-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.2);
+	box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.2);
+
+	border: 1px solid var(--bg2);
+	background: lightsalmon;
+}
+
+/********* PHOTO ***********/
+.row-photo-h2{
+	background: url(../img/photos/bolga_0028.jpg) 50% 50% fixed no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.photo-gallerie{
+	padding: 150px 0;
+}
+
+.photo-gallerie .photo-col{
+	padding: 2px;
+}
+
+.photo-gallerie img{
+	width: 100%;
+}
+
+.photo-col:nth-child(2) > img{
+	padding-bottom: 4px;
+}
+
+.photo-col:nth-child(3) > img{
+	padding-bottom: 4px;
+}
+
 /******************************************************************************/
 
 

@@ -4,6 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116466463-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-116466463-1');
+	</script>
+
 	<title>Mon portfolio de fou</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -23,9 +33,9 @@
   			<div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
     			<div class="navbar-nav">
       				<a class="nav-item nav-link active myNav-item" href="#">about<span class="sr-only">(current)</span></a>
-      				<a class="nav-item nav-link myNav-item" href="#digital">digital</a>
+      				<a class="nav-item nav-link myNav-item" href="#frontend">digital</a>
       				<a class="nav-item nav-link myNav-item" href="#print">print</a>
-      				<a class="nav-item nav-link myNav-item myNav-item-last" href="#contact">contact</a>
+      				<a class="nav-item nav-link myNav-item" href="#contact">contact</a>
     			</div>
   			</div>
 		</nav>
@@ -52,13 +62,16 @@
 	</div>	
 		<div class="conteneur-general">
 			<div class="container-fluid vide-conteneur">
-				
+				<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="100%" height="300px"
+					viewBox= "0 0 100 100" preserveAspectRatio="none">
+					<path d="M 0,50 C 20 100, 80 100, 100 50 L 100,0 L 0,0 L 0, 50 Z" fill="#445663" />
+				</svg>
 			</div>
 			<div class="con-profil">
-				<h1>Quelques mots sur moi</h1>
 				<div class="profil-img">
 					<div class="profil"></div>
 				</div>
+				<h2 class="go-anim">Quelques mots sur moi</h2>
 			</div>
 			<div class="clear"></div>
 			<div class="container-fluid con-about">
@@ -66,32 +79,309 @@
 					<div class="col-12">
 						<div class="container">
 							<div class="row"> <!-- bulle dialogue -->
-								<div class="col-12">
-									<h2>Hoan Vu NGO</h2>
-									<span class="fas fa-quote-left"></span>
+								<div class="col-12 justify-content-between">
+									<h3>Hoan Vu NGO</h3>
+									<i class="fas fa-quote-left"></i>
 									<p class="bulle-dialogue">
 										Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
 									</p>
-									<span class="fas fa-quote-right"></span>
+									<i class="fas fa-quote-right"></i>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="container-fluid" id="con-frontend"> <!-- Front End -->
+			<div class="container-fluid" id="frontend"> <!-- Front End -->
 				<!-- <div class="row row-transition"></div> -->
-				
-			</div> <!-- con-frontend -->
+				<div class="row row-fe-h2">
+					<div class="customOverlayContainer">
+						<svg class="knockout-text-container" width="100%" height="100%">
+							<rect class="knockout-text-bg" width="100%" height="100%" fill="#fff" x="0" y="0" fill-opacity="1" mask="url(#knockout-text)"
+							/>
+					
+							<mask id="knockout-text">
+								<rect width="100%" height="100%" fill="#69D2E7" fill-opacity="0.8" x="0" y="0" />
+								<text x="50%" y="60%" fill="#000000" fill-opacity="1" text-anchor="middle">Ce que je code_</text>
+							</mask>
+						</svg>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row row-etapes justify-content-center">
+						<div class="col-6 col-md-3">
+							<div class="icone-conteneur"><i class="far fa-lightbulb"></i></div>
+							<h4>Penser différent</h4>
+							<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+							est le faux texte standard de l'imprimerie depuis les années 1500</p>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="icone-conteneur"><i class="fas fa-pencil-alt"></i></div>
+							<h4>Sketcher ses inspirations</h4>
+							<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+								est le faux texte standard de l'imprimerie depuis les années 1500</p>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="icone-conteneur"><i class="fas fa-laptop"></i></div>
+							<h4>Designer ses idées</h4>
+							<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+								est le faux texte standard de l'imprimerie depuis les années 1500</p>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="icone-conteneur"><i class="fas fa-code"></i></div>
+							<h4>Coder le tout</h4>
+							<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+								est le faux texte standard de l'imprimerie depuis les années 1500</p>
+						</div>
+					</div>
+				</div>
+				<div class="container" id="gallerie-frontend"> <!-- container gall -->
+					<div class="row no-gutters"> <!-- 01 gauche -->
+						<div class="col-12 col-md-6 gall-powder anim-bg1">
+							<div class="img-conteneur-gauche img-conteneur1">
+								<img class="img01" src="img/photos/bolga_0017.jpg" alt="" data-toggle="modal" data-target="#exampleModalCenter">
+							</div>
+						</div>
+						<div class="col-12 col-md-6 gall-vide">
+							<div class="site-number number01">
+								<h2>#01</h2>
+							</div>
+							<div class="site-texte">
+								<h2 class="anim-h2-1">Lorem Ipsum</h2>
+								<p class="anim-p-1">Lorem Ipsum est un générateur de faux textes aléatoires. Vous choisissez le nombre de paragraphes, de mots ou de listes.
+								Vous obtenez alors un texte aléatoire que vous pourrez ensuite utiliser librement dans vos maquettes.</p>
+							</div>
+						</div>
+					</div> <!-- 01 gauche-->
+					<div class="row no-gutters row-gall-droite"> <!-- 02 droite -->
+						<div class="col-12 col-md-6 gall-vide">
+							<div class="site-number-gauche number02">
+								<h2>#02</h2>
+							</div>
+							<div class="clearfix"></div>
+							<div class="site-texte-gauche">
+								<h2 class="anim-h2-2">Lorem Ipsum</h2>
+								<p class="anim-p-2">Lorem Ipsum est un générateur de faux textes aléatoires. Vous choisissez le nombre de paragraphes, de mots ou de listes.
+									Vous obtenez alors un texte aléatoire que vous pourrez ensuite utiliser librement dans vos maquettes.</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="col-12 col-md-6 gall-salmon anim-bg2">
+							<div class="site-conteneur-droite">
+							</div>
+							<div class="img-conteneur-droite img-conteneur2">
+								<img class="img02" src="img/photos/bolga_0016.jpg" alt="">
+							</div>
+						</div>
+					</div><!-- 02 droite -->
+					<div class="row no-gutters gall-margin-top"><!-- 03 gauche -->
+						<div class="col-12 col-md-6 gall-powder anim-bg3">
+							<div class="img-conteneur-gauche img-conteneur3">
+								<img class="img03" src="img/photos/bolga_0019.jpg" alt="" data-toggle="modal" data-target="#exampleModalCenter">
+							</div>
+						</div>
+						<div class="col-12 col-md-6 gall-vide">
+							<div class="site-number number03">
+								<h2>#03</h2>
+							</div>
+							<div class="site-texte">
+								<h2 class="anim-h2-3">Lorem Ipsum</h2>
+								<p class="anim-p-3">Lorem Ipsum est un générateur de faux textes aléatoires. Vous choisissez le nombre de paragraphes, de mots ou de listes.
+									Vous obtenez alors un texte aléatoire que vous pourrez ensuite utiliser librement dans vos maquettes.</p>
+							</div>
+						</div>
+					</div> <!-- 03 gauche-->
+					<div class="row no-gutters row-gall-droite"> <!-- 04 droite -->
+						<div class="col-12 col-md-6 gall-vide">
+							<div class="site-number-gauche number04">
+								<h2>#04</h2>
+							</div>
+							<div class="clearfix"></div>
+							<div class="site-texte-gauche">
+								<h2 class="anim-h2-4">Lorem Ipsum</h2>
+								<p class="anim-p-4">Lorem Ipsum est un générateur de faux textes aléatoires. Vous choisissez le nombre de paragraphes, de mots ou de listes.
+									Vous obtenez alors un texte aléatoire que vous pourrez ensuite utiliser librement dans vos maquettes.</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="col-12 col-md-6 gall-salmon anim-bg4">
+							<div class="site-conteneur-droite">
+							</div>
+							<div class="img-conteneur-droite img-conteneur4">
+								<img class="img04" src="img/photos/bolga_0023.jpg" alt="">
+							</div>
+						</div>
+					</div> <!-- 04 droite -->
+				</div> <!-- container gall -->
+				<div class="row justify-content-center row-plus">
+					<div class="more-conteneur">
+						<div class="plus-more">fly me to the moon !</div>
+					</div>
+					<div class="col-12 plus-conteneur">
+						<svg class="site-plus" width="100px" height="100px" xml:lang="fr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<path id="btn-plus" d="M 0,50 L 100,50 L 100,100 L 0,100 Z" />
+							<!--<path d="M 0,50 Q 50,40 100,50 L 100,100 L 0,100 Z" />-->
+							<text x="50%" y="82%" fill="#fff" fill-opacity="1" text-anchor="middle">+</text>
+						</svg>
+					</div>
+				</div>				
+			</div> <!-- Front End -->
+			<div class="container-fluid" id="graphisme"> <!-- Grapgisme -->
+				<div class="row row-graph-h2"> <!-- row h2 -->
+					<div class="customOverlayContainer">
+						<svg class="text-container" width="100%" height="100%">
+							<rect class="knockout-text-bg" width="100%" height="100%" fill="#fff" x="0" y="0" fill-opacity="1" mask="url(#text-graph)"
+							/>
+							<mask id="text-graph">
+								<rect width="100%" height="100%" fill="#fff" fill-opacity="0.8" x="0" y="0" />
+								<text x="50%" y="60%" fill="#000000" fill-opacity="1" text-anchor="middle">Ce que je fais en graphisme </text>
+							</mask>
+						</svg>
+					</div>
+				</div> <!-- row h2 -->
+				<div class="container">
+					<div class="row justify-content-center row-graph-adobe"> <!-- Adobe -->
+						<div class="col-12 col-md-4 graph-col">
+							
+								<svg class="svg-graph-ai" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;;fill:#000000;">
+									<linearGradient id="SVGID_1__69425" gradientUnits="userSpaceOnUse" x1="32" y1="9.0833" x2="32" y2="54.6759" spreadMethod="reflect">
+										<stop offset="0" style="stop-color:lightsalmon"></stop>
+										<stop offset="1" style="stop-color:powderblue"></stop>
+									</linearGradient>
+									<path style="fill:url(#SVGID_1__69425);" d="M50,55H14c-2.757,0-5-2.243-5-5V14c0-2.757,2.243-5,5-5h36c2.757,0,5,2.243,5,5v36  C55,52.757,52.757,55,50,55z M14,11c-1.654,0-3,1.346-3,3v36c0,1.654,1.346,3,3,3h36c1.654,0,3-1.346,3-3V14c0-1.654-1.346-3-3-3H14  z"></path>
+									<linearGradient id="SVGID_2__69425" gradientUnits="userSpaceOnUse" x1="40" y1="32" x2="40" y2="44" spreadMethod="reflect">
+										<stop offset="0" style="stop-color:#6DC7FF"></stop>
+										<stop offset="1" style="stop-color:#E6ABFF"></stop>
+									</linearGradient>
+									<path style="fill:url(#SVGID_2__69425);" d="M38,43V33c0-0.552,0.448-1,1-1h2c0.552,0,1,0.448,1,1v10c0,0.552-0.448,1-1,1h-2  C38.448,44,38,43.552,38,43z"></path>
+									<linearGradient id="SVGID_3__69425" gradientUnits="userSpaceOnUse" x1="40" y1="26" x2="40" y2="30" spreadMethod="reflect">
+										<stop offset="0" style="stop-color:#6DC7FF"></stop>
+										<stop offset="1" style="stop-color:#E6ABFF"></stop>
+									</linearGradient>
+									<path style="fill:url(#SVGID_3__69425);" d="M38,29v-2c0-0.552,0.448-1,1-1h2c0.552,0,1,0.448,1,1v2c0,0.552-0.448,1-1,1h-2  C38.448,30,38,29.552,38,29z"></path>
+									<linearGradient id="SVGID_4__69425" gradientUnits="userSpaceOnUse" x1="27.5" y1="21" x2="27.5" y2="44" spreadMethod="reflect">
+										<stop offset="0" style="stop-color:#6DC7FF"></stop>
+										<stop offset="1" style="stop-color:#E6ABFF"></stop>
+									</linearGradient>
+									<path style="fill:url(#SVGID_4__69425);" d="M30,21h-5c-2.21,0-4,1.79-4,4v18c0,0.55,0.45,1,1,1h2c0.55,0,1-0.45,1-1v-7h5v7  c0,0.55,0.45,1,1,1h2c0.55,0,1-0.45,1-1V25C34,22.79,32.21,21,30,21z M29,32h-3c-0.55,0-1-0.45-1-1v-5c0-0.55,0.45-1,1-1h3  c0.55,0,1,0.45,1,1v5C30,31.55,29.55,32,29,32z"></path>
+								</svg>
+							
+							<h4 class="graph-h4-ai">Illustrator</h4>
+							<p class="graph-p-ai">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+								est le faux texte standard de l'imprimerie depuis les années 1500</p>
+						</div>
+						<div class="col-12 col-md-4 graph-col">
+							<svg class="svg-graph-id" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;;fill:#000000;">
+								<linearGradient id="SVGID_1__69423" gradientUnits="userSpaceOnUse" x1="32" y1="9.0833" x2="32" y2="54.6759" spreadMethod="reflect">
+									<stop offset="0" style="stop-color:#C822FF"></stop>
+									<stop offset="1" style="stop-color:powderblue"></stop>
+								</linearGradient>
+								<path style="fill:url(#SVGID_1__69423);" d="M50,55H14c-2.757,0-5-2.243-5-5V14c0-2.757,2.243-5,5-5h36c2.757,0,5,2.243,5,5v36  C55,52.757,52.757,55,50,55z M14,11c-1.654,0-3,1.346-3,3v36c0,1.654,1.346,3,3,3h36c1.654,0,3-1.346,3-3V14c0-1.654-1.346-3-3-3H14  z"></path>
+								<linearGradient id="SVGID_2__69423" gradientUnits="userSpaceOnUse" x1="26" y1="21" x2="26" y2="44" gradientTransform="matrix(-1 0 0 1 62 0)"
+								 spreadMethod="reflect">
+									<stop offset="0" style="stop-color:#6DC7FF"></stop>
+									<stop offset="1" style="stop-color:#E6ABFF"></stop>
+								</linearGradient>
+								<path style="fill:url(#SVGID_2__69423);" d="M34,26h4v-4c0-0.552,0.448-1,1-1h2c0.552,0,1,0.448,1,1v12.462V40c0,2.209-1.791,4-4,4h-4  c-2.209,0-4-1.791-4-4V30C30,27.791,31.791,26,34,26z M34,39.038C34,39.569,34.41,40,34.917,40h2.167C37.59,40,38,39.569,38,39.038  V31c0-0.552-0.448-1-1-1h-2c-0.552,0-1,0.448-1,1V39.038z"></path>
+								<linearGradient id="SVGID_3__69423" gradientUnits="userSpaceOnUse" x1="24" y1="21" x2="24" y2="44" spreadMethod="reflect">
+									<stop offset="0" style="stop-color:#6DC7FF"></stop>
+									<stop offset="1" style="stop-color:#E6ABFF"></stop>
+								</linearGradient>
+								<path style="fill:url(#SVGID_3__69423);" d="M22,43.038C22,43.57,22.448,44,23,44h2c0.552,0,1-0.43,1-0.962V22c0-0.552-0.448-1-1-1h-2  c-0.552,0-1,0.448-1,1V43.038z"></path>
+							</svg>
+							<h4 class="graph-h4-id">Indesign</h4>
+							<p class="graph-p-id">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+								est le faux texte standard de l'imprimerie depuis les années 1500</p>
+						</div>
+						<div class="col-12 col-md-4 graph-col">
+							<svg class="svg-graph-ps" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;;fill:#000000;">
+								<linearGradient id="SVGID_1__48134" gradientUnits="userSpaceOnUse" x1="32" y1="9.0833" x2="32" y2="54.6759" spreadMethod="reflect">
+									<stop offset="0" style="stop-color:#1A6DFF"></stop>
+									<stop offset="1" style="stop-color:powderblue"></stop>
+								</linearGradient>
+								<path style="fill:url(#SVGID_1__48134);" d="M50,55H14c-2.757,0-5-2.243-5-5V14c0-2.757,2.243-5,5-5h36c2.757,0,5,2.243,5,5v36  C55,52.757,52.757,55,50,55z M14,11c-1.654,0-3,1.346-3,3v36c0,1.654,1.346,3,3,3h36c1.654,0,3-1.346,3-3V14c0-1.654-1.346-3-3-3H14  z"></path>
+								<linearGradient id="SVGID_2__48134" gradientUnits="userSpaceOnUse" x1="39.5" y1="26" x2="39.5" y2="44" spreadMethod="reflect">
+									<stop offset="0" style="stop-color:#6DC7FF"></stop>
+									<stop offset="1" style="stop-color:#E6ABFF"></stop>
+								</linearGradient>
+								<path style="fill:url(#SVGID_2__48134);" d="M34,43v-2c0-0.552,0.448-1,1-1h6v-3h-3c-2.209,0-4-1.791-4-4v-3c0-2.209,1.791-4,4-4h4  c0.552,0,1,0.448,1,1v2c0,0.552-0.448,1-1,1h-4v3h3c2.209,0,4,1.791,4,4v3c0,2.209-1.791,4-4,4h-6C34.448,44,34,43.552,34,43z"></path>
+								<linearGradient id="SVGID_3__48134" gradientUnits="userSpaceOnUse" x1="24.5" y1="21" x2="24.5" y2="44" spreadMethod="reflect">
+									<stop offset="0" style="stop-color:#6DC7FF"></stop>
+									<stop offset="1" style="stop-color:#E6ABFF"></stop>
+								</linearGradient>
+								<path style="fill:url(#SVGID_3__48134);" d="M22,21c-2.209,0-4,1.791-4,4v18c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1v-7h5  c2.209,0,4-1.791,4-4v-7c0-2.209-1.791-4-4-4H22z M22,31v-5c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v5c0,0.552-0.448,1-1,1h-3  C22.448,32,22,31.552,22,31z"></path>
+							</svg>
+							<h4 class="graph-h4-ps">Photoshop</h4>
+							<p class="graph-p-ps">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+								est le faux texte standard de l'imprimerie depuis les années 1500</p>
+						</div>
+					</div> <!-- Adobe -->
+					<div class="row graph-gallerie"> <!-- Graph Gallerie -->
+						<div class="col-6 gallerie-col">
+							<div class="gallerie-img-conteneur">
+								<img src="img/photos/dsc0123.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-6 gallerie-col">
+							<div class="gallerie-img-conteneur">
+								<img src="img/photos/dsc0174.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-6 gallerie-col">
+							<div class="gallerie-img-conteneur">
+								<img src="img/photos/dsc0102.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-6 gallerie-col">
+							<div class="gallerie-img-conteneur">
+								<img src="img/photos/dsc0551.jpg" alt="">
+							</div>
+						</div>
+					</div> <!-- Graph Gallerie -->
+				</div>
+			</div> <!-- GRaphisme -->
+			<div class="container-fluid" id="photo"> <!-- PHOTO -->
+				<div class="row row-photo-h2"> <!-- row h2 -->
+					<div class="customOverlayContainer">
+						<svg class="text-container" width="100%" height="100%">
+							<rect class="knockout-text-bg" width="100%" height="100%" fill="#fff" x="0" y="0" fill-opacity="1" mask="url(#text-photo)"
+							/>
+							<mask id="text-photo">
+								<rect width="100%" height="100%" fill="#fff" fill-opacity="0.8" x="0" y="0" />
+								<text x="50%" y="60%" fill="#000000" fill-opacity="1" text-anchor="middle">Ce que je capture</text>
+							</mask>
+						</svg>
+					</div>
+				</div> <!-- row h2 -->
+				<div class="container">
+					<div class="row photo-gallerie">
+						<div class="col-12 col-md-8 photo-col">
+							<img src="img/photos/dsc0222bis.jpg" alt="">
+						</div>
+						<div class="col-6 col-md-4 photo-col">
+							<img src="img/photos/DSC_0234.jpg" alt="">
+							<img src="img/photos/DSC_0226.jpg" alt="">
+						</div>
+						<div class="col-6 col-md-4 photo-col">
+							<img src="img/photos/DSC_0139-min.jpg" alt="">
+							<img src="img/photos/DSC_0335-min.jpg" alt="">
+						</div>
+						<div class="col-12 col-md-8 photo-col">
+							<img src="img/photos/dsc0235.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div> <!-- PHOTO -->
 		</div> <!-- conteneur general -->
-		
+
 	<!--<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
 	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>-->
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/jquery_easing.1.3.js"></script>
 	<script type="text/javascript" src="js/firewizard.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script src="js/portfolio.js"></script>
+	<script src="js/port.min.js"></script>
 </body>
 </html>
