@@ -414,7 +414,7 @@ a.myNav-item{
 }
 
 text{
-  font-size: 6rem;
+  font-size: 9rem;
 }
 
 #frontend .row-etapes{
@@ -422,30 +422,10 @@ text{
 	text-align: center;
 }
 
-.icone-conteneur{
-	background: var(--bleu1);
-	border-radius: 50%;
-	display: inline-block;
-	margin-bottom: 30px;
-	overflow: hidden;
-	opacity: 0;
-	-moz-box-shadow: 1px 1px 20px 1px var(--bg2);
-	-webkit-box-shadow: 1px 1px 20px 1px var(--bg2);
-	-o-box-shadow: 1px 1px 20px 1px var(--bg2);
-	box-shadow: 1px 1px 20px 1px var(--bg2);
-}
-
-.icone-conteneur i{
-	font-size: 4.5em;
-	color: #fff;
-	position: relative;
-	top: 20px;
-	opacity: 0;
-}
-
-.icone-conteneur:hover{
-	background: lightsalmon;
-	transition: all 500ms ease-in-out;
+.etape /**.etape2, .etape3, .etape4**/{
+	width: 0;
+	height: 0;
+	opacity: 1;
 }
 
 .row-etapes h4, .row-etapes p{

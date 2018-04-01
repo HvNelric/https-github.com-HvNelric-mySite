@@ -2,6 +2,7 @@ $(document).ready( function() {
     var selectNav = $('nav');
     var selectPlus = $('#bg-plus');
     var selecGraphH2 = $('.row-graph-h2');
+    var allImg = $('img');
     var goImg ;
     var $elem;
     var $window;
@@ -12,10 +13,14 @@ $(document).ready( function() {
     var leScroll = 0;
 
     var elt = [
-        { num: '.number01', img: '.img01' },
-        { num: '.number02', img: '.img02' },
-        { num: '.number03', img: '.img03' },
-        { num: '.number04', img: '.img04' },
+        {num: '.number01'},
+        {num: '.number02'},
+        {num: '.number03'},
+        {num: '.number04'},
+        {etape: '.etape1'},
+        {etape: '.etape2'},
+        {etape: '.etape3'},
+        {etape: '.etape4'}
     ];
     
     // anim démarrage
@@ -58,47 +63,48 @@ $(document).ready( function() {
     $(window).on('scroll', docParallax1);
     $(window).on('scroll', docParallax2);
 
+    // hover all img
+    allImg.hover(function() {
+        $(this).animate({opacity: '0.4'}, 250);
+    },
+    function() {
+        $(this).animate({opacity: '1'}, 250);
+    }
+    );
+
     // hover IMG chagement bg des numéro
 
       
     $('.img01').hover(function () {
-        $(this).animate({ 'opacity': '0.4' }, 250);
         $('.number01').animate({ "width": "500" }, 50, "easeOutExpo");
     },
         function () {
             $('.number01').animate({ "width": "200" }, 150, "easeOutExpo");
-            $(this).animate({ 'opacity': '1' }, 250, "easeOutQuad");
         }
     );    
    
     $('.img02').hover(function () {
-        $(this).animate({ 'opacity': '0.4' }, 250);
         $('.number02').animate({"width": "500"}, 150, "easeOutExpo");
         },
         function () {
             $('.number02').animate({ "width": "200" }, 150, "easeOutExpo");
-            $(this).animate({ 'opacity': '1' }, 250, "easeOutQuad");
         }
     );
     
 
     $('.img03').hover(function () {
-        $(this).animate({ 'opacity': '0.4' }, 250, "easeOutQuad");
         $('.number03').animate({ "width": "500" }, 50, "easeInExpo");
         },
         function () {
             $('.number03').animate({ "width": "200" }, 150, "easeOutExpo");
-            $(this).animate({ 'opacity': '1' }, 250, "easeOutQuad");
         }
     );
 
     $('.img04').hover(function () {
-        $(this).animate({ 'opacity': '0.4' }, 250);
         $('.number04').animate({ "width": "500" }, 150, "easeOutExpo");
     },
         function () {
             $('.number04').animate({ "width": "200" }, 150, "easeOutExpo");
-            $(this).animate({ 'opacity': '1' }, 250, "easeOutQuad");
         }
     );
 
@@ -148,27 +154,34 @@ $(document).ready( function() {
             animMarginTop('.con-about p', 650, '20px', '1', 1550);
             animMarginTop('.con-about i', 1250, '0', '1', 1550);
         }
-        else if(inView(goIcone)) {
-            goIcone.animate({width: '100px', height: '100px', opacity: '1'}, 550, 'easeOutBounce', function() {
-                $('.icone-conteneur i').animate({opacity: '1' }, 750, 'easeInOutExpo');
-            })
-            .next().delay(200).animate({marginTop: '0', opacity: '1'}, 1550, 'easeInOutExpo')
-            .next().delay(650).animate({marginTop: '20px', opacity: '1'}, 1500, 'easeInOutExpo');
+        if(inView($('#etapes .etape'))) {
+            $.each($('#etapes .etape'), function(index, value) {
+                console.log(value);
+                $(value).animate({width: '100%', height: '200px'}, 4550, 'easeOutBounce').delay(500);
+            });
+            
+                
+                
+        //     goIcone.animate({width: '100px', height: '100px', opacity: '1'}, 550, 'easeOutBounce', function() {
+        //         $('.icone-conteneur i').animate({opacity: '1' }, 750, 'easeInOutExpo');
+        //     })
+        //     .next().delay(200).animate({marginTop: '0', opacity: '1'}, 1550, 'easeInOutExpo')
+        //     .next().delay(650).animate({marginTop: '20px', opacity: '1'}, 1500, 'easeInOutExpo');
         }
-        else if(inView($('.number01'))) {
+        if(inView($('.number01'))) {
             goAnimFrontGauche('.anim-bg1', '.img-conteneur1', '.anim-h2-1', '.anim-p-1');
         }
-        else if(inView($('.number02'))) {  
+        if(inView($('.number02'))) {  
             goAnimFrontDroite('.anim-bg2', '.img-conteneur2', '.anim-h2-2', '.anim-p-2');
         }
-        else if(inView($('.number03'))) {
+        if(inView($('.number03'))) {
             goAnimFrontGauche('.anim-bg3', '.img-conteneur3', '.anim-h2-3', '.anim-p-3');
         }
-        else if(inView($('.number04'))) {
+        if(inView($('.number04'))) {
             goAnimFrontDroite('.anim-bg4', '.img-conteneur4', '.anim-h2-4', '.anim-p-4');
         }
 
-        else if (inView($('.svg-graph-id'))) {
+        if(inView($('.svg-graph-id'))) {
             $('.svg-graph-id').animate({ width: '150px', height: '150px' }, 1500, 'easeOutBounce');
             $('.svg-graph-ai').delay(200).animate({ width: '150px', height: '150px' }, 1500, 'easeOutBounce');
             $('.svg-graph-ps').delay(400).animate({ width: '150px', height: '150px' }, 1500, 'easeOutBounce');

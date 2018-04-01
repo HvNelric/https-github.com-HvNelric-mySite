@@ -3,7 +3,7 @@ function castParallax() {
 	var opThresh = 350;
 	var opFactor = 750;
 
-/*
+
 	$(window).scroll(function(){
 		var windowScroll = $(window).scrollTop();
 		
@@ -21,7 +21,7 @@ function castParallax() {
 		$('#keyart-scrim').css('opacity', backgroundOpacity);
 	});
 
-*/
+
 	window.addEventListener("scroll", function(event){
 
 		var top = this.pageYOffset;
