@@ -341,7 +341,7 @@ a.myNav-item{
 .con-profil .profil-img .profil{
 	background: url('../img/forPoly.png') 33px 24px no-repeat;
 	background-size: auto;
-	background-color: var(--vert2);        /*#05192d*/
+	background-color: var(--color-head);        /*#05192d*/
 	height: 270px;
 	width: 270px;
 	border-radius: 100%;
@@ -422,10 +422,9 @@ text{
 	text-align: center;
 }
 
-.etape /**.etape2, .etape3, .etape4**/{
+.etape1, .etape2, .etape3, .etape4{
 	width: 0;
 	height: 0;
-	opacity: 1;
 }
 
 .row-etapes h4, .row-etapes p{
@@ -694,6 +693,8 @@ text{
 /******** Graph Gallerie ******/
 .graph-gallerie .gallerie-col{
 	padding: 10px;
+	margin-top: 100px;
+	opacity: 0;
 }
 
 .graph-gallerie .gallerie-col .gallerie-img-conteneur img{
@@ -708,7 +709,7 @@ text{
 	box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.2);
 
 	border: 1px solid var(--bg2);
-	background: lightsalmon;
+	background: #fff;
 }
 
 /********* PHOTO ***********/
@@ -725,6 +726,8 @@ text{
 
 .photo-gallerie .photo-col{
 	padding: 2px;
+	margin-top: 100px;
+	opacity: 0;
 }
 
 .photo-gallerie img{

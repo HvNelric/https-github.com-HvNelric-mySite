@@ -154,17 +154,50 @@ $(document).ready( function() {
             animMarginTop('.con-about p', 650, '20px', '1', 1550);
             animMarginTop('.con-about i', 1250, '0', '1', 1550);
         }
-        if(inView($('#etapes .etape'))) {
-            $.each($('#etapes .etape'), function(index, value) {
-                console.log(value);
-                $(value).animate({width: '100%', height: '200px'}, 4550, 'easeOutBounce').delay(500);
-            });
-            
-                
-                
-        //     goIcone.animate({width: '100px', height: '100px', opacity: '1'}, 550, 'easeOutBounce', function() {
-        //         $('.icone-conteneur i').animate({opacity: '1' }, 750, 'easeInOutExpo');
-        //     })
+        if(inView($('#etapes .etape1'))) {
+            $('#etapes .etape1').animate({
+                width: '100%',
+                height: '200px'},
+                1000, 'easeOutBounce')
+            .next().delay(200).animate({
+                marginTop: '0',
+                opacity: '1'},
+                1550, 'easeInOutExpo')
+            .next().delay(650).animate({
+                marginTop: '20px',
+                opacity: '1'},
+                1500, 'easeInOutExpo');
+
+            $('#etapes .etape2').delay(400).animate({
+                width: '100%',
+                height: '200px'},1000, 'easeOutBounce')
+            .next().delay(600).animate({
+                marginTop: '0',
+                opacity: '1'}, 1550, 'easeInOutExpo')
+            .next().delay(1050).animate({
+                marginTop: '20px',
+                opacity: '1'}, 1500, 'easeInOutExpo');
+
+            $('#etapes .etape3').delay(800).animate({
+                width: '100%',
+                height: '200px'}, 1000, 'easeOutBounce')
+            .next().delay(1000).animate({
+                marginTop: '0', 
+                opacity: '1'}, 1550, 'easeInOutExpo')
+            .next().delay(1450).animate({
+                marginTop: '20px', 
+                opacity: '1'}, 1500, 'easeInOutExpo');
+
+            $('#etapes .etape4').delay(1200).animate({
+                width: '100%',
+                height: '200px'}, 1000, 'easeOutBounce')
+            .next().delay(1400).animate({
+                marginTop: '0', 
+                opacity: '1'}, 1550, 'easeInOutExpo')
+            .next().delay(1850).animate({
+                marginTop: '20px', 
+                opacity: '1'}, 1500, 'easeInOutExpo');
+
         //     .next().delay(200).animate({marginTop: '0', opacity: '1'}, 1550, 'easeInOutExpo')
         //     .next().delay(650).animate({marginTop: '20px', opacity: '1'}, 1500, 'easeInOutExpo');
         }
@@ -194,7 +227,15 @@ $(document).ready( function() {
 
             animMarginTop('.graph-h4-ps', 0, '0', '1', 1000);
             animMarginTop('.graph-p-ps', 200, '20px', '1', 1500);
-        }   
+        }
+        
+        if(inView('.gallerie-col')) {
+            animMarginTop('.gallerie-col', 0, '0', '1', 1500);
+        }
+
+        if(inView('.photo-col')) {
+            animMarginTop('.photo-col', 0, '0', '1', 1500);
+        }
 
     }); // fin scroll inView
     
