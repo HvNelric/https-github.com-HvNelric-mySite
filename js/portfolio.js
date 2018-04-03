@@ -3,7 +3,7 @@ $(document).ready( function() {
     var selectPlus = $('#bg-plus');
     var selecGraphH2 = $('.row-graph-h2');
     var allImg = $('img');
-    var goImg ;
+    var goImg;
     var $elem;
     var $window;
     var docViewTop;
@@ -60,8 +60,8 @@ $(document).ready( function() {
         });
     }
 
-    $(window).on('scroll', docParallax1);
-    $(window).on('scroll', docParallax2);
+    $(window).scroll(docParallax1);
+    $(window).scroll(docParallax2);
 
     // hover all img
     allImg.hover(function() {
@@ -76,35 +76,42 @@ $(document).ready( function() {
 
       
     $('.img01').hover(function () {
-        $('.number01').animate({ "width": "500" }, 50, "easeOutExpo");
+        $('.number01').animate({
+            width: "500" }, 50, "easeOutExpo");
     },
         function () {
-            $('.number01').animate({ "width": "200" }, 150, "easeOutExpo");
+            $('.number01').animate({ 
+                width: "200" }, 150, "easeOutExpo");
         }
     );    
    
     $('.img02').hover(function () {
-        $('.number02').animate({"width": "500"}, 150, "easeOutExpo");
+        $('.number02').animate({
+            width: "500"}, 150, "easeOutExpo");
         },
         function () {
-            $('.number02').animate({ "width": "200" }, 150, "easeOutExpo");
+            $('.number02').animate({
+                width: "200" }, 150, "easeOutExpo");
         }
     );
     
-
     $('.img03').hover(function () {
-        $('.number03').animate({ "width": "500" }, 50, "easeInExpo");
+        $('.number03').animate({
+            width: "500" }, 50, "easeInExpo");
         },
         function () {
-            $('.number03').animate({ "width": "200" }, 150, "easeOutExpo");
+            $('.number03').animate({
+                width: "200" }, 150, "easeOutExpo");
         }
     );
 
     $('.img04').hover(function () {
-        $('.number04').animate({ "width": "500" }, 150, "easeOutExpo");
+        $('.number04').animate({
+            width: "500" }, 150, "easeOutExpo");
     },
         function () {
-            $('.number04').animate({ "width": "200" }, 150, "easeOutExpo");
+            $('.number04').animate({
+                width: "200" }, 150, "easeOutExpo");
         }
     );
 

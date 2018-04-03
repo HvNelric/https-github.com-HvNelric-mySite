@@ -742,6 +742,29 @@ text{
 	padding-bottom: 4px;
 }
 
+/******** myMODAL **********************************************************************************/
+#myModal{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top : 0;
+	left: 0;
+	z-index: 600;
+}
+
+.mymodal-top{
+	padding: 0.8rem;
+	text-align: right;
+	background: black;
+}
+
+#btn-close{
+	fill:red;
+	background: brown;
+}
+
+
+
 /******************************************************************************/
 
 
