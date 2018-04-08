@@ -70,14 +70,17 @@ $(document).ready( function() {
     },
     function() {
         $(this).animate({opacity: '1'}, 250);
-    }
-    );
+    });
 
     // modal
     allImg.click(function() {
         urlImg = $(this).attr('src');
         $('#myModal img').attr('src', urlImg);
         $('#myModal').fadeIn();
+
+        if($('.myNav').is(':visible')) {
+            $('.myNav').hide();
+        }
     });
 
     $('#myModal .ion-ios-close-outline, #myModal .modal-img-conteneur').click(function() {
@@ -172,7 +175,7 @@ $(document).ready( function() {
             animMarginTop('.con-about i', 1250, '0', '1', 1550);
         }
         if(inView($('#etapes .etape1'))) {
-            $('#etapes .etape1').animate({ //////////////////////////////////////////////////// FRED !! comment peut-on fractionner ces 4 blocs de codes ? J'ai penser a mettre les class (.etapes1, .etapes2, etc...) dans un tableau et et les boucler sur un scrollTop mais je ne sais pas si c'est une bonne idée. :( 
+            $('#etapes .etape1').animate({ ////////////////// FRED !! comment peut-on fractionner ces 4 blocs de codes ? J'ai penser a mettre les class (.etapes1, .etapes2, etc...) dans un tableau et et les boucler sur un scrollTop mais je ne sais pas si c'est une bonne idée. :( 
                 width: '100%',
                 height: '200px'},
                 1000, 'easeOutBounce')
@@ -258,11 +261,11 @@ $(document).ready( function() {
     
     // hover frontend plus
     $('.site-plus').hover(function () {
-        $('#btn-plus').attr('d', 'M 100,100 L 0,0 L 100,0 L 100,100 Z');
+        $('.btn-plus').attr('d', 'M 100,100 L 0,0 L 100,0 L 100,100 Z');
         $('.plus-more').animate({ left: '0' }, 800, 'easeOutBounce');
     },
         function () {
-            $('#btn-plus').attr('d', 'M 0,50 L 100,50 L 100,100 L 0,100 Z');
+            $('.btn-plus').attr('d', 'M 0,50 L 100,50 L 100,100 L 0,100 Z');
             $('.plus-more').animate({ left: '-250px' }, 500, 'easeInOutExpo');
         }
     );
