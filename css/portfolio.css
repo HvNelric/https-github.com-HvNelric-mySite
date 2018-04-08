@@ -769,10 +769,11 @@ text{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
 .modal-img-conteneur img{
-	width: 100%;
+	height: 100%;
 }
 
 .mymodal-top, .mymodal-bottom{
@@ -815,7 +816,9 @@ text{
 	margin: 2rem 0.5rem;
 }
 
-
+.row-touch span:hover{
+	color: lightsalmon;
+}
 
 
 /******************************************************************************/
