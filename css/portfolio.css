@@ -749,21 +749,32 @@ text{
 	position: fixed;
 	top : 0;
 	left: 0;
-	z-index: 600;
+	z-index: 9000;
+	display: none;
 }
 
-.mymodal-top{
-	padding: 0.8rem;
+.modal-img-conteneur{
+	height: 90vh;
+	background: black;
+	text-align: center;
+}
+
+.modal-img-conteneur img{
+	height: 90vh;
+}
+
+.mymodal-top, .mymodal-bottom{
+	padding: 0.2rem;
+	height: 5vh;
 	text-align: right;
 	background: black;
 }
 
-#btn-close{
-	fill:red;
-	background: brown;
+.mymodal-top span{
+	color: #fff;
+	font-size: 2rem;
+	margin-right: 30px;
 }
-
-
 
 /******************************************************************************/
 

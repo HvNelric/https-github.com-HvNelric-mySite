@@ -2,7 +2,8 @@ $(document).ready( function() {
     var selectNav = $('nav');
     var selectPlus = $('#bg-plus');
     var selecGraphH2 = $('.row-graph-h2');
-    var allImg = $('img');
+    var allImg = $('.onHover');
+    var urlImg;
     var goImg;
     var $elem;
     var $window;
@@ -72,9 +73,18 @@ $(document).ready( function() {
     }
     );
 
-    // hover IMG chagement bg des numéro
+    // modal
+    allImg.click(function() {
+        urlImg = $(this).attr('src');
+        $('#myModal img').attr('src', urlImg);
+        $('#myModal').fadeIn();
+    });
 
-      
+    $('#myModal .ion-ios-close-outline, #myModal .modal-img-conteneur').click(function() {
+        $('#myModal').fadeOut();
+    })
+
+    // hover IMG chagement bg des numéro
     $('.img01').hover(function () {
         $('.number01').animate({
             width: "500" }, 50, "easeOutExpo");
@@ -162,7 +172,7 @@ $(document).ready( function() {
             animMarginTop('.con-about i', 1250, '0', '1', 1550);
         }
         if(inView($('#etapes .etape1'))) {
-            $('#etapes .etape1').animate({
+            $('#etapes .etape1').animate({ //////////////////////////////////////////////////// FRED !! comment peut-on fractionner ces 4 blocs de codes ? J'ai penser a mettre les class (.etapes1, .etapes2, etc...) dans un tableau et et les boucler sur un scrollTop mais je ne sais pas si c'est une bonne idée. :( 
                 width: '100%',
                 height: '200px'},
                 1000, 'easeOutBounce')
