@@ -643,12 +643,16 @@ text{
 }
 
 .btn-plus{
-	transition: all 500ms ease-in-out;
+	transition: all 250ms ease-in-out;
 }
 
-.row-plus .plus-conteneur .site-plus:hover .btn-plus{
+.site-plus:hover .btn-plus{
 	fill: lightsalmon;
 	transition: all 250ms ease-in-out;
+}
+
+.plus-conteneur .site-plus text{
+	color: black;
 }
 
 /********** GRAPHISME *********/
@@ -799,7 +803,7 @@ text{
 	margin: 1rem 5rem 0 0;
 }
 
-/***************** FOOTER ******************************/
+/***************** FOOTER ****************************************************************/
 .row-touch{
 	padding: 150px 0;
 	background: var(--color-head);
@@ -813,13 +817,60 @@ text{
 .row-touch span{
 	font-size: 4rem;
 	color: #fff;
-	margin: 2rem 0.5rem;
+	margin: 2rem 0.5rem 0 0.5rem;
 }
 
 .row-touch span:hover{
 	color: lightsalmon;
 }
 
+/************* FORM ************/
+.row-form{
+	background: url(../img/photos/DSC_0299-min.jpg) 0 0 no-repeat;
+	height: 1080px;
+	padding: 150px 0;
+	text-align: center;
+}
+
+.form-top{
+	height: 50px;
+	background: rgba(255,255,255,0.6);
+	border-radius: 20px 20px 0 0;
+
+	-webkit-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+	box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+}
+
+.form-conteneur input{
+	background: rgba(255,255,255,0.5);
+	margin-top: 30px;
+	border: none;
+
+	-webkit-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+	box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+}
+
+.form-conteneur textarea{
+	background: rgba(255,255,255,0.5);
+	margin-top: 30px;
+	border: none;
+
+	-webkit-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+	box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+}
+.form-bottom{
+	height: 100px;
+	background: rgba(255,255,255,0.6);
+	border-radius: 0 0 20px 20px;
+	margin-top: 30px;
+
+	-webkit-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+	box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+}
 
 /******************************************************************************/
 
