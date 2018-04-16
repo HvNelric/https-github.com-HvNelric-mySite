@@ -174,53 +174,26 @@ $(document).ready( function() {
             animMarginTop('.con-about p', 650, '20px', '1', 1550);
             animMarginTop('.con-about i', 1250, '0', '1', 1550);
         }
+
         if(inView($('#etapes .etape1'))) {
-            $('#etapes .etape1').animate({ ////////////////// FRED !! comment peut-on fractionner ces 4 blocs de codes ? J'ai penser a mettre les class (.etapes1, .etapes2, etc...) dans un tableau et et les boucler sur un scrollTop mais je ne sais pas si c'est une bonne idée. :( 
-                width: '100%',
+            for(var i = 1; i <= 4; i++) {
+                var selEtape = '.etape';
+                var etape =  selEtape + i;
+                $(etape).delay(500*i).animate({
+                    width: '100%',
                 height: '200px'},
                 1000, 'easeOutBounce')
-            .next().delay(200).animate({
+            .next().delay(200*i).animate({
                 marginTop: '0',
                 opacity: '1'},
                 1550, 'easeInOutExpo')
-            .next().delay(650).animate({
+            .next().delay(650*i).animate({
                 marginTop: '20px',
                 opacity: '1'},
                 1500, 'easeInOutExpo');
-
-            $('#etapes .etape2').delay(400).animate({
-                width: '100%',
-                height: '200px'},1000, 'easeOutBounce')
-            .next().delay(600).animate({
-                marginTop: '0',
-                opacity: '1'}, 1550, 'easeInOutExpo')
-            .next().delay(1050).animate({
-                marginTop: '20px',
-                opacity: '1'}, 1500, 'easeInOutExpo');
-
-            $('#etapes .etape3').delay(800).animate({
-                width: '100%',
-                height: '200px'}, 1000, 'easeOutBounce')
-            .next().delay(1000).animate({
-                marginTop: '0', 
-                opacity: '1'}, 1550, 'easeInOutExpo')
-            .next().delay(1450).animate({
-                marginTop: '20px', 
-                opacity: '1'}, 1500, 'easeInOutExpo');
-
-            $('#etapes .etape4').delay(1200).animate({
-                width: '100%',
-                height: '200px'}, 1000, 'easeOutBounce')
-            .next().delay(1400).animate({
-                marginTop: '0', 
-                opacity: '1'}, 1550, 'easeInOutExpo')
-            .next().delay(1850).animate({
-                marginTop: '20px', 
-                opacity: '1'}, 1500, 'easeInOutExpo');
-
-        //     .next().delay(200).animate({marginTop: '0', opacity: '1'}, 1550, 'easeInOutExpo')
-        //     .next().delay(650).animate({marginTop: '20px', opacity: '1'}, 1500, 'easeInOutExpo');
+            }
         }
+
         if(inView($('.number01'))) {
             goAnimFrontGauche('.anim-bg1', '.img-conteneur1', '.anim-h2-1', '.anim-p-1');
         }
@@ -270,25 +243,6 @@ $(document).ready( function() {
         }
     );
 
-    // var imgs = '.img0';
-    // var nums = '.number0';
-
-    // for (var i = 1; i <= 4; i++) {
-    //     img = imgs + i;
-    //     num = nums + i;
-    //     console.log(img, num);       
-
-    // }
-
-    // $(img).mouseenter(function () {
-    //     $(this).animate({ 'opacity': '0.4' }, 250, "easeOutQuad");
-    //     $(num).animate({ "width": "500" }, 50, "easeInExpo");
-
-    // });
-    // $(img).mouseleave(function () {
-    //     $(this).animate({ 'opacity': '1' }, 250, "easeOutQuad");
-    //     $(num).animate({ "width": "200" }, 150, "easeOutExpo");
-    // });
 
 
     
