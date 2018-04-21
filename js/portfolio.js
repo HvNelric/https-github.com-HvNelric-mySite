@@ -12,17 +12,6 @@ $(document).ready( function() {
     var elemTop;
     var elemBottom;
     var leScroll = 0;
-
-    var elt = [
-        {num: '.number01'},
-        {num: '.number02'},
-        {num: '.number03'},
-        {num: '.number04'},
-        {etape: '.etape1'},
-        {etape: '.etape2'},
-        {etape: '.etape3'},
-        {etape: '.etape4'}
-    ];
     
     // anim démarrage
     $('#keyart-1').fadeIn(3000).removeClass('hide');
@@ -89,40 +78,48 @@ $(document).ready( function() {
 
     // hover IMG chagement bg des numéro
     $('.img01').hover(function () {
+        $('.info1').animate({opacity: "0.85"}, 500);
         $('.number01').animate({
             width: "500" }, 50, "easeOutExpo");
     },
         function () {
-            $('.number01').animate({ 
-                width: "200" }, 150, "easeOutExpo");
-        }
-    );    
-   
+            $('.info1').animate({ opacity: "0" }, 100);
+            $('.number01').animate({
+                width: "200"
+            }, 150, "easeOutExpo");
+    });
+
     $('.img02').hover(function () {
+        $('.info2').animate({ opacity: "0.85" }, 500);
         $('.number02').animate({
             width: "500"}, 150, "easeOutExpo");
         },
         function () {
+            $('.info2').animate({ opacity: "0" }, 100);
             $('.number02').animate({
                 width: "200" }, 150, "easeOutExpo");
         }
     );
     
     $('.img03').hover(function () {
+        $('.info3').animate({ opacity: "0.85" }, 500);
         $('.number03').animate({
             width: "500" }, 50, "easeInExpo");
         },
         function () {
+            $('.info3').animate({ opacity: "0" }, 100);
             $('.number03').animate({
                 width: "200" }, 150, "easeOutExpo");
         }
     );
 
     $('.img04').hover(function () {
+        $('.info4').animate({ opacity: "0.85" }, 500);
         $('.number04').animate({
             width: "500" }, 150, "easeOutExpo");
     },
         function () {
+            $('.info4').animate({ opacity: "0" }, 100);
             $('.number04').animate({
                 width: "200" }, 150, "easeOutExpo");
         }
@@ -177,18 +174,17 @@ $(document).ready( function() {
 
         if(inView($('#etapes .etape1'))) {
             for(var i = 1; i <= 4; i++) {
-                var selEtape = '.etape';
-                var etape =  selEtape + i;
+                var etape = '.etape' +i;
                 $(etape).delay(500*i).animate({
                     width: '100%',
                 height: '200px'},
-                1000, 'easeOutBounce')
-            .next().delay(200*i).animate({
-                marginTop: '0',
+                    500, 'easeInOutExpo')
+            .next().delay(500*i).animate({
+                top: '0',
                 opacity: '1'},
-                1550, 'easeInOutExpo')
+                1000, 'easeInOutExpo')
             .next().delay(650*i).animate({
-                marginTop: '20px',
+                top: '20px',
                 opacity: '1'},
                 1500, 'easeInOutExpo');
             }
@@ -208,9 +204,9 @@ $(document).ready( function() {
         }
 
         if(inView($('.svg-graph-id'))) {
-            $('.svg-graph-id').animate({ width: '150px', height: '150px' }, 1500, 'easeOutBounce');
-            $('.svg-graph-ai').delay(200).animate({ width: '150px', height: '150px' }, 1500, 'easeOutBounce');
-            $('.svg-graph-ps').delay(400).animate({ width: '150px', height: '150px' }, 1500, 'easeOutBounce');
+            $('.svg-graph-id').animate({ width: '150px', height: '150px' }, 1500, 'easeInOutExpo');
+            $('.svg-graph-ai').delay(100).animate({ width: '150px', height: '150px' }, 1500, 'easeInOutExpo');
+            $('.svg-graph-ps').delay(300).animate({ width: '150px', height: '150px' }, 1500, 'easeInOutExpo');
 
             animMarginTop('.graph-h4-id', 0, '0', '1', 1000);
             animMarginTop('.graph-p-id', 200, '20px', '1', 1000);

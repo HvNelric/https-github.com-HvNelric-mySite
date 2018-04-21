@@ -433,12 +433,17 @@ text{
 
 .row-etapes h4, .row-etapes p{
 	opacity: 0;
-	margin-top: 100px;
+	position: relative;
 }
 
-#frontend .row-etapes p{
+.row-etapes h4{
+	top: 100px;
+}
+
+.row-etapes p{
 	line-height: 1.7;
 	margin-bottom: 0;
+	top : 100px;
 }
 
 .go-anim-icone{
@@ -457,7 +462,6 @@ text{
 	top: 50px;
 	left: 50px;
 	background: #fff;
-	overflow: hidden;
 	-moz-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
 	-o-box-shadow: 1px 1px 40px 0px rgba(0,0,0,0.3);
@@ -502,8 +506,29 @@ text{
 	margin-top: 20px;
 	margin-left: 200px;
 	opacity: 0;
-	padding: 0 50px 20px 0;
+	padding: 10 50px 10px 10px;
 	line-height: 1.7;
+}
+
+.info1, .info2, .info3, .info4{
+	position: absolute;
+	bottom: -50px;
+	width: 100px;
+	height: 100px;
+	background: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+}
+
+.info1, .info3{
+	left: -50px;
+}
+
+.info2, .info4 {
+	right: -50px;
 }
 
 /**************** GALL DROITE *******************/
