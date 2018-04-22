@@ -55,10 +55,12 @@ $(document).ready( function() {
 
     // hover all img
     allImg.hover(function() {
-        $(this).animate({opacity: '0.4'}, 250);
+        $(this).animate({opacity: '0.4'}, 250)
+            .next('div').animate({ opacity: '0.9' }, 250);
     },
     function() {
-        $(this).animate({opacity: '1'}, 250);
+        $(this).animate({opacity: '1'}, 250)
+            .next('div').animate({ opacity: '0' }, 250);
     });
 
     // modal
@@ -140,7 +142,6 @@ $(document).ready( function() {
     }
 
     $(window).scroll(function () {
-        var goAnim = $('.go-anim');
         var goIcone = $('.icone-conteneur');
 
         function animOpacity(sel, opac, time) {
@@ -165,9 +166,8 @@ $(document).ready( function() {
             $(dsel4).delay(400).animate({ marginRight: '20px', opacity: '1' }, 1000, 'easeInOutExpo');
         }
 
-        if(inView(goAnim)) {
-            animMarginTop('.go-anim', 0, '0', '1', 1550);
-            animMarginTop('.con-about h3', 200, '0', '1', 1550);
+        if(inView($('#myName'))) {
+            animMarginTop('#myName', 200, '0', '1', 1550);
             animMarginTop('.con-about p', 650, '20px', '1', 1550);
             animMarginTop('.con-about i', 1250, '0', '1', 1550);
         }
@@ -203,10 +203,10 @@ $(document).ready( function() {
             goAnimFrontDroite('.anim-bg4', '.img-conteneur4', '.anim-h2-4', '.anim-p-4');
         }
 
-        if(inView($('.svg-graph-id'))) {
-            $('.svg-graph-id').animate({ width: '150px', height: '150px' }, 1500, 'easeInOutExpo');
-            $('.svg-graph-ai').delay(100).animate({ width: '150px', height: '150px' }, 1500, 'easeInOutExpo');
-            $('.svg-graph-ps').delay(300).animate({ width: '150px', height: '150px' }, 1500, 'easeInOutExpo');
+        if(inView($('#svg-graph-id'))) {
+            $('#svg-graph-id').animate({ width: '100%', height: '200px' }, 1500, 'easeInOutExpo');
+            $('#svg-graph-ai').delay(100).animate({ width: '100%', height: '200px' }, 1500, 'easeInOutExpo');
+            $('#svg-graph-ps').delay(300).animate({ width: '100%', height: '200px' }, 1500, 'easeInOutExpo');
 
             animMarginTop('.graph-h4-id', 0, '0', '1', 1000);
             animMarginTop('.graph-p-id', 200, '20px', '1', 1000);

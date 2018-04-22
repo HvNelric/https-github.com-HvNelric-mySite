@@ -323,12 +323,13 @@ a.myNav-item{
 	top: 120px;
 	text-align: center;
 }
-.con-profil h2{
+
+/* .con-profil h2{
 	color: var(--bleu1);
 	margin: 0 0 50px 0;
 	opacity: 0;
 	margin-top: 100px;
-}
+} */
 
 .con-profil .profil-img{
 	background: #ffffff;
@@ -355,12 +356,12 @@ a.myNav-item{
 }
 
 .con-about{
-	padding: 330px 10px 100px 10px;
+	padding: 180px 10px 100px 10px;
 	background: var(--bg1);
 	text-align: center;
 }
 
-.con-about h3{
+#myName{
 	margin-top: 100px;
 	margin-bottom: 50px;
 	opacity: 0;
@@ -424,7 +425,7 @@ text{
 }
 
 #frontend .row-etapes{
-	padding: 150px 0;
+	padding: 100px 0;
 	text-align: center;
 }
 
@@ -629,7 +630,7 @@ text{
 
 /************** PLUS **************/
 .row-plus{
-	padding-top: 150px;
+	padding-top: 100px;
 }
 
 .row-plus .plus-conteneur{
@@ -707,7 +708,7 @@ background-image: linear-gradient(45deg, #e9defa 0%, #fbfcdb 100%);
 
 /************ Adobe *********/
 .row-graph-adobe{
-	padding: 150px 0;
+	padding: 50px 0;
 	text-align: center;
 }
 
@@ -719,7 +720,7 @@ background-image: linear-gradient(45deg, #e9defa 0%, #fbfcdb 100%);
 	line-height: 1.7;
 }
 
-.svg-graph-ai, .svg-graph-id, .svg-graph-ps{
+#svg-graph-ai, #svg-graph-id, #svg-graph-ps{
 	width: 1px;
 	height: 1px;
 }
@@ -751,7 +752,7 @@ background-image: linear-gradient(45deg, #e9defa 0%, #fbfcdb 100%);
 	-webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.2);
 	-o-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.2);
 	box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.2);
-
+	position: relative;
 	border: 1px solid var(--bg2);
 	background: #fff;
 }
@@ -767,7 +768,7 @@ background-image: linear-gradient(45deg, #e9defa 0%, #fbfcdb 100%);
 }
 
 .photo-gallerie{
-	padding: 150px 0 0 0;
+	padding: 100px 0 0 0;
 }
 
 .photo-gallerie .photo-col{
@@ -789,7 +790,7 @@ background-image: linear-gradient(45deg, #e9defa 0%, #fbfcdb 100%);
 }
 
 #photo .row-plus{
-	padding: 20px 0 150px 0;
+	padding: 20px 0 100px 0;
 }
 
 /******** myMODAL **********************************************************************************/
@@ -838,6 +839,20 @@ background-image: linear-gradient(45deg, #e9defa 0%, #fbfcdb 100%);
 .mymodal-bottom p{
 	color: #fff;
 	margin: 1rem 5rem 0 0;
+}
+
+.moreInfo{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: black;
+	color: white;
+	opacity: 0;
 }
 
 /***************** FOOTER ****************************************************************/
