@@ -96,7 +96,7 @@
 				<div class="row row-fe-h2">
 					<div class="customOverlayContainer">
 						<svg class="knockout-text-container" width="100%" height="100%">
-							<rect class="knockout-text-bg" width="100%" height="100%" fill="#fff" x="0" y="0" fill-opacity="0.6" mask="url(#knockout-text)"
+							<rect class="knockout-text-bg" width="100%" height="100%" fill="#fff" x="0" y="0" fill-opacity="0.4" mask="url(#knockout-text)"
 							/>
 					
 							<mask id="knockout-text">
@@ -289,10 +289,10 @@
 				<div class="row row-graph-h2"> <!-- row h2 -->
 					<div class="customOverlayContainer">
 						<svg class="text-container" width="100%" height="100%">
-							<rect class="knockout-text-bg" width="100%" height="100%" fill="#fff" x="0" y="0" fill-opacity="1" mask="url(#text-graph)"
+							<rect class="knockout-text-bg" width="100%" height="100%" fill="#fff" x="0" y="0" fill-opacity="0.4" mask="url(#text-graph)"
 							/>
 							<mask id="text-graph">
-								<rect width="100%" height="100%" fill="#fff" fill-opacity="0.8" x="0" y="0" />
+								<rect width="100%" height="100%" fill="#fff" fill-opacity="1" x="0" y="0" />
 								<text x="50%" y="60%" fill="#000000" fill-opacity="1" text-anchor="middle">Ce que je fais en graphisme </text>
 							</mask>
 						</svg>
@@ -403,10 +403,10 @@
 				<div class="row row-photo-h2"> <!-- row h2 -->
 					<div class="customOverlayContainer">
 						<svg class="text-container" width="100%" height="100%">
-							<rect class="knockout-text-bg" width="100%" height="100%" fill="#fff" x="0" y="0" fill-opacity="1" mask="url(#text-photo)"
+							<rect class="knockout-text-bg" width="100%" height="100%" fill="#fff" x="0" y="0" fill-opacity="0.4" mask="url(#text-photo)"
 							/>
 							<mask id="text-photo">
-								<rect width="100%" height="100%" fill="#fff" fill-opacity="0.8" x="0" y="0" />
+								<rect width="100%" height="100%" fill="#fff" fill-opacity="1" x="0" y="0" />
 								<text x="50%" y="60%" fill="#000000" fill-opacity="1" text-anchor="middle">Ce que je capture</text>
 							</mask>
 						</svg>
@@ -473,12 +473,9 @@
 				<div class="row row-form">
 					<div class="container">
 						<div class="col-12">
-							<h2>Contactez-moi</h2>
-							<div class="form-top">
-								
-							</div>
+							<h2 class="text-white">Contactez-moi</h2>
 							<div class="form-conteneur">
-								<form>
+								<form method="post">
 									<div class="form-row">
 										<div class="col">
 											<input type="text" class="form-control" placeholder="Prénom">
@@ -492,10 +489,9 @@
 								
 								
 									<textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Votre commentaire"></textarea>
+
+									<button class="btn-submit" type="submit" name="btn-submit">Envoyer</button>
 								</form>
-							</div>
-							<div class="form-bottom">
-								
 							</div>
 						</div>
 					</div>

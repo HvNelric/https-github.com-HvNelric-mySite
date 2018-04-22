@@ -404,6 +404,8 @@ a.myNav-item{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-top: 1px solid var(--bg2);
+	border-bottom: 1px solid var(--bg2);
 }
 
 #frontend .row-fe-h2 h2{
@@ -682,9 +684,15 @@ text{
 
 /********** GRAPHISME *********/
 #graphisme{
-	padding: 100px 0;
-	background: var(--bg1);
-	height: 2000px;
+	padding-bottom: 100px;
+
+	/* background: #8e9eab;
+	background: -webkit-linear-gradient(to right top, #8e9eab, #eef2f3);
+	background: linear-gradient(to right top, #8e9eab, #eef2f3); */
+
+background-image: linear-gradient(45deg, #e9defa 0%, #fbfcdb 100%);
+
+
 
 }
 
@@ -693,6 +701,8 @@ text{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-top: 1px solid var(--bg2);
+	border-bottom: 1px solid var(--bg2);
 }
 
 /************ Adobe *********/
@@ -752,6 +762,8 @@ text{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-top: 1px solid var(--bg2);
+	border-bottom: 1px solid var(--bg2);
 }
 
 .photo-gallerie{
@@ -857,44 +869,30 @@ text{
 	text-align: center;
 }
 
-.form-top{
-	height: 50px;
-	background: rgba(255,255,255,0.6);
-	border-radius: 20px 20px 0 0;
-
-	-webkit-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
-	-moz-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
-	box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
-}
-
 .form-conteneur input{
 	background: rgba(255,255,255,0.5);
-	margin-top: 30px;
+	margin-top: 50px;
 	border: none;
 
-	-webkit-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
-	-moz-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
-	box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
 }
 
 .form-conteneur textarea{
 	background: rgba(255,255,255,0.5);
-	margin-top: 30px;
+	margin-top: 50px;
 	border: none;
 
-	-webkit-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
-	-moz-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
-	box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
 }
-.form-bottom{
-	height: 100px;
-	background: rgba(255,255,255,0.6);
-	border-radius: 0 0 20px 20px;
-	margin-top: 30px;
 
-	-webkit-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
-	-moz-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
-	box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.15);
+.btn-submit{
+	background:  rgba(255,255,255,0.9);
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	border: none;
+	position: relative;
+	top: -50px;
 }
 
 /******************************************************************************/
