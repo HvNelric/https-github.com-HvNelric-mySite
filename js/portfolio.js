@@ -79,6 +79,7 @@ $(document).ready( function() {
     })
 
     // hover IMG chagement bg des numéro
+
     $('.img01').hover(function () {
         $('.info1').animate({opacity: "0.85"}, 500);
         $('.number01').animate({
@@ -89,7 +90,7 @@ $(document).ready( function() {
             $('.number01').animate({
                 width: "200"
             }, 150, "easeOutExpo");
-    });
+        });
 
     $('.img02').hover(function () {
         $('.info2').animate({ opacity: "0.85" }, 500);
@@ -183,7 +184,7 @@ $(document).ready( function() {
                 top: '0',
                 opacity: '1'},
                 1000, 'easeInOutExpo')
-            .next().delay(650*i).animate({
+            .next().delay(450*i).animate({
                 top: '20px',
                 opacity: '1'},
                 1500, 'easeInOutExpo');
